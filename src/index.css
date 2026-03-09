@@ -365,3 +365,19 @@ nav {
     color: var(--primary-300);
   }
 }
+
+/* ============= PAGE CONTENT (routing demo) =============== */
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.page-title {
+  margin-bottom: 1rem;
+  color: var(--grey-800);
+}
+.page-text {
+  line-height: 1.6;
+  color: var(--grey-600);
+  max-width: 40em;
+}
