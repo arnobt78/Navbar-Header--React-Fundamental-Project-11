@@ -369,22 +369,25 @@ nav {
 }
 
 /* ============= PAGE CONTENT (routing demo) =============== */
-/* padding-block (vertical) = space above/below; padding-inline (horizontal) = same as nav so text aligns with logo */
+/* Fills space below navbar and centers h1 + p in the middle of the screen (horizontal + vertical) */
 .page {
   max-width: 1280px;
   margin: 0 auto;
-  padding-block: 2rem;
   padding-inline: 1rem;
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .page-title {
   margin-bottom: 1rem;
   color: var(--grey-800);
-  text-align: center;
 }
 .page-text {
   line-height: 1.6;
   color: var(--grey-600);
-  max-width: 60em;
-  text-align: center;
+  max-width: 40em;
+  margin: 0 auto;
 }
