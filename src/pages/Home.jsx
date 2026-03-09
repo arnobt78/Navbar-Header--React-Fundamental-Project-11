@@ -1,3 +1,4 @@
+/** Home page: default route (/). Rendered when user visits root or clicks "Home" in nav. */
 const Home = () => {
   return (
     <section className="page">

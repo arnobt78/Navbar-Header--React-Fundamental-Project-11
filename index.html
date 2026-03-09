@@ -1,3 +1,8 @@
+<!--
+  App shell: single HTML entry for the SPA.
+  React mounts into #root; Vite injects the script for main.jsx.
+  All route paths (e.g. /about) must serve this file so React Router can handle them.
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,6 +31,7 @@
     <link rel="canonical" href="https://navbar-link.vercel.app/" />
   </head>
   <body>
+    <!-- React root: entire app is rendered here by main.jsx -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

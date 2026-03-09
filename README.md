@@ -6,9 +6,9 @@
 [![React Router](https://img.shields.io/badge/React_Router-7.x-CA4245)](https://reactrouter.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-- **Live Demo:** [https://navbar-link.vercel.app/](https://navbar-link.vercel.app/)
+A learning-focused, responsive Navbar built with React and Vite. It demonstrates client-side routing, React hooks (`useState`, `useRef`), dynamic layout (mobile toggle, desktop inline links), and reusable data-driven components. Use it as a reference for building navigation in single-page applications or as teaching material for React fundamentals.
 
-This project is a learning-focused, responsive Navbar built with React and Vite. It demonstrates client-side routing, React hooks (`useState`, `useRef`), dynamic layout (mobile toggle, desktop inline links), and reusable data-driven components. Use it as a reference for building navigation in single-page applications or as teaching material for React fundamentals.
+- **Live Demo:** [https://navbar-link.vercel.app/](https://navbar-link.vercel.app/)
 
 ---
 
@@ -62,15 +62,15 @@ There is **no backend or API** in this project; it is frontend-only and suitable
 
 ## Technology Stack
 
-| Category   | Technology |
-|-----------|------------|
-| UI        | React 18 (functional components, hooks) |
-| Build     | Vite 4 |
-| Routing   | React Router DOM 7 |
-| Language  | JavaScript (ES6+), JSX |
-| Styling   | Custom CSS (variables, flexbox, media queries) |
-| Icons     | react-icons (Font Awesome subset) |
-| Tooling   | ESLint 9 (flat config), Babel (ESLint parser + preset-react) |
+| Category | Technology                                                   |
+| -------- | ------------------------------------------------------------ |
+| UI       | React 18 (functional components, hooks)                      |
+| Build    | Vite 4                                                       |
+| Routing  | React Router DOM 7                                           |
+| Language | JavaScript (ES6+), JSX                                       |
+| Styling  | Custom CSS (variables, flexbox, media queries)               |
+| Icons    | react-icons (Font Awesome subset)                            |
+| Tooling  | ESLint 9 (flat config), Babel (ESLint parser + preset-react) |
 
 **No backend, no database, no external API.** The app is static after build; routing is handled entirely on the client.
 
@@ -78,7 +78,7 @@ There is **no backend or API** in this project; it is frontend-only and suitable
 
 ## Project Structure
 
-```plaintext
+```bash
 11-navbar/
 ├── public/
 │   └── vite.svg                 # Favicon / app icon
@@ -145,8 +145,8 @@ VITE_APP_TITLE=Navbar Header
 VITE_API_BASE_URL=https://api.example.com
 ```
 
-3. In code, read them via `import.meta.env.VITE_APP_TITLE` and `import.meta.env.VITE_API_BASE_URL`.
-4. Add a `.env.example` file with placeholder values and document each variable in the README so others know what to set.
+1. In code, read them via `import.meta.env.VITE_APP_TITLE` and `import.meta.env.VITE_API_BASE_URL`.
+2. Add a `.env.example` file with placeholder values and document each variable in the README so others know what to set.
 
 **Important:** Never commit `.env` or real secrets. Ensure `.env` is listed in `.gitignore` (or use a template like `.env.example` only).
 
@@ -188,13 +188,13 @@ npm run lint:fix   # Auto-fix where possible
 
 Routing is defined in `App.jsx` and uses React Router’s `BrowserRouter`, `Routes`, and `Route`. All paths are client-side; the server must serve `index.html` for every path (see [Deployment](#deployment)).
 
-| Path       | Component   | Purpose (demo)        |
-|-----------|-------------|------------------------|
-| `/`       | `Home`      | Welcome + short intro |
-| `/about`  | `About`     | Explains SPA routing   |
-| `/projects` | `Projects` | Course/demo context    |
-| `/contact`  | `Contact`  | Placeholder contact    |
-| `/profile`  | `Profile`  | Placeholder profile    |
+| Path        | Component  | Purpose (demo)        |
+| ----------- | ---------- | --------------------- |
+| `/`         | `Home`     | Welcome + short intro |
+| `/about`    | `About`    | Explains SPA routing  |
+| `/projects` | `Projects` | Course/demo context   |
+| `/contact`  | `Contact`  | Placeholder contact   |
+| `/profile`  | `Profile`  | Placeholder profile   |
 
 **How it works:** The navbar uses `<Link to={url}>` from `react-router-dom` for each item in `links` (from `data.jsx`). Clicking a link updates the URL and React Router renders the matching `Route`’s `element` (e.g. `<About />`) without a full page load.
 
@@ -207,9 +207,9 @@ Routing is defined in `App.jsx` and uses React Router’s `BrowserRouter`, `Rout
 Sets up the router and layout: navbar always visible, route content below.
 
 ```jsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import Home from './pages/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./pages/Home";
 // ... other pages
 
 const App = () => {
@@ -248,15 +248,17 @@ import { Link } from "react-router-dom";
       <Link to={link.url}>{link.text}</Link>
     </li>
   ))}
-</ul>
+</ul>;
 // ...
-{social.map((socialIcon) => (
-  <li key={socialIcon.id}>
-    <a href={socialIcon.url} target="_blank" rel="noopener noreferrer">
-      {socialIcon.icon}
-    </a>
-  </li>
-))}
+{
+  social.map((socialIcon) => (
+    <li key={socialIcon.id}>
+      <a href={socialIcon.url} target="_blank" rel="noopener noreferrer">
+        {socialIcon.icon}
+      </a>
+    </li>
+  ));
+}
 ```
 
 ---
@@ -322,13 +324,13 @@ Build output is in `dist/` after `npm run build`. Point the host’s document ro
 
 ## Scripts Reference
 
-| Command          | Description |
-|------------------|-------------|
-| `npm run dev`    | Start Vite dev server (HMR) |
-| `npm run build`  | Production build into `dist/` |
-| `npm run preview` | Serve `dist/` locally |
-| `npm run lint`   | Run ESLint on project |
-| `npm run lint:fix` | Run ESLint and apply fixes |
+| Command            | Description                   |
+| ------------------ | ----------------------------- |
+| `npm run dev`      | Start Vite dev server (HMR)   |
+| `npm run build`    | Production build into `dist/` |
+| `npm run preview`  | Serve `dist/` locally         |
+| `npm run lint`     | Run ESLint on project         |
+| `npm run lint:fix` | Run ESLint and apply fixes    |
 
 ---
 

@@ -1,4 +1,11 @@
+/**
+ * Data layer: single source of truth for navbar links and social icons.
+ * - links: used by Navbar with <Link to={url}>; each url must have a matching Route in App.jsx.
+ * - social: external URLs; rendered as <a href={url} target="_blank"> with icon component.
+ */
 import { FaBehance, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+/** In-app navigation items (path + label). Paths are handled by React Router. */
 export const links = [
   {
     id: 1,
@@ -27,6 +34,7 @@ export const links = [
   },
 ];
 
+/** External social links: icon is a React element from react-icons; open in new tab in Navbar. */
 export const social = [
   {
     id: 1,

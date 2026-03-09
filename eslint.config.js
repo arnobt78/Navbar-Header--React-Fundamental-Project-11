@@ -1,3 +1,8 @@
+/**
+ * ESLint flat config (v9+): lint rules for JS/JSX.
+ * - Base: @eslint/js recommended. Parser: Babel (for JSX and modern syntax).
+ * - React and React Hooks plugins; react-in-jsx-scope off (React 17+ automatic runtime).
+ */
 import { createRequire } from 'node:module';
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
@@ -43,8 +48,8 @@ export default [
     rules: {
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off', /* not needed with React 17+ JSX transform */
+      'react/prop-types': 'off', /* project uses JS only; enable if you add PropTypes */
     },
     settings: {
       react: {

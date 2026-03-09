@@ -1,3 +1,4 @@
+/** About page: route /about. Demo content explaining SPA routing. */
 const About = () => {
   return (
     <section className="page">

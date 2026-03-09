@@ -1,3 +1,4 @@
+/** Profile page: route /profile. Placeholder; navbar stays mounted, only this content swaps. */
 const Profile = () => {
   return (
     <section className="page">

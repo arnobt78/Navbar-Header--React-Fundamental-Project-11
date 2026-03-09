@@ -1,3 +1,4 @@
+/** Projects page: route /projects. Placeholder for project list or course context. */
 const Projects = () => {
   return (
     <section className="page">

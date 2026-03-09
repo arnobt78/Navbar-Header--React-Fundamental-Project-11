@@ -1,3 +1,4 @@
+/** Contact page: route /contact. Placeholder; can be extended with a form or contact details. */
 const Contact = () => {
   return (
     <section className="page">

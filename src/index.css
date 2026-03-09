@@ -1,4 +1,5 @@
 /* ============= GLOBAL CSS =============== */
+/* Reset and base styles applied app-wide. Variables in :root are used by nav and page sections. */
 
 *,
 ::after,
@@ -12,6 +13,7 @@ html {
   font-size: 100%;
 } /*16px*/
 
+/* Design tokens: reuse these in nav and page content for consistency */
 :root {
   /* colors */
   --primary-100: #c5e5fc;
@@ -367,10 +369,13 @@ nav {
 }
 
 /* ============= PAGE CONTENT (routing demo) =============== */
+/* padding-block (vertical) = space above/below; padding-inline (horizontal) = same as nav so text aligns with logo */
 .page {
-  max-width: var(--max-width);
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0rem 0rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  text-align: left;
 }
 .page-title {
   margin-bottom: 1rem;
@@ -379,5 +384,5 @@ nav {
 .page-text {
   line-height: 1.6;
   color: var(--grey-600);
-  max-width: 60em;
+  max-width: 40em;
 }
