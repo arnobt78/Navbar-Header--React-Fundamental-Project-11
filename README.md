@@ -1,4 +1,4 @@
-# Navbar Header - React, Vite, JavaScript, Custom CSS Fundamental Project 11
+# Navbar Router - React, Vite, JavaScript, Custom CSS Fundamental Project 11
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.2-blue)](https://react.dev/)
