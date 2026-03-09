@@ -380,9 +380,11 @@ nav {
 .page-title {
   margin-bottom: 1rem;
   color: var(--grey-800);
+  text-align: center;
 }
 .page-text {
   line-height: 1.6;
   color: var(--grey-600);
-  max-width: 40em;
+  max-width: 60em;
+  text-align: center;
 }
