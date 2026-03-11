@@ -10,7 +10,7 @@ A learning-focused, responsive Navbar built with React and Vite. It demonstrates
 
 - **Live Demo:** [https://navbar-link.vercel.app/](https://navbar-link.vercel.app/)
 
----
+<img width="1512" height="878" alt="Screenshot 2026-03-11 at 15 18 51" src="https://github.com/user-attachments/assets/1c022972-d270-45bc-8868-069ba058e245" />
 
 ## Table of Contents
 
